@@ -266,7 +266,7 @@ contract MyGovernorTest is Test {
         governor.queue(targets, values, calldatas, unpauseHash);
 
         // Wait for timelock
-        vm.warp(block.timestamp + MIN_DELAY + 1);
+        vm.warp(block.timestamp + MIN_DELAY + 2);
 
         // Execute (unpause the contract)
         governor.execute(targets, values, calldatas, unpauseHash);
